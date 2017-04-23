@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" media="screen" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Get tips in your inbox!</h4>
+  </div>
+  <div class="modal-body">
+    <form id="sign-up-form">
+      <fieldset>
+      <legend>What are you interested in?</legend>
+              <input type="checkbox" name="interest" value="Excel" />Excel Automation <br />
+              <input type="checkbox" name="interest" value="Assistant" />Personal Assistant<br />
+              <input type="checkbox" name="interest" value="Answering" />Answering services<br />
+      </fieldset>
+      <label>Email address: <input type="text" name="email"></label>
+      <label>Create a password: <input type="password" name="password"></label>
+      <fieldset>
+      <legend>How often would you like to receive updates?</legend>
+              <input type="radio" name="frequency" value="Daily" />Daily
+              <input type="radio" name="frequency" value="Weekly" />Weekly
+              <input type="radio" name="frequency" value="Monthly" />Monthly
+      </fieldset>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">I'd rather work harder</button>
+    <button type="button" class="btn btn-primary">I'm in!</button>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

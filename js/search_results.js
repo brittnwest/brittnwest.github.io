@@ -37,8 +37,7 @@ success: function (data) {
     newDiv.appendChild(newContainer)
     newContainer.appendChild(newHeading)
     newContainer.appendChild(newDesc)
-    console.log(result.recipe.label)
-    console.log(result.recipe.healthLabels)
+    
   });
 },
 error: function (data) {

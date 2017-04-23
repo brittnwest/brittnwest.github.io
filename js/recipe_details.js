@@ -19,8 +19,9 @@ $(document).ready(function(){
   headers: { "Accept": "application/json; odata=verbose" },
   success: function (data) {
       var imgNode = document.getElementById("recipe-image");
+      var title = document.getElementById("recipe-title");
+      title.innerText = data[0].label
       imgNode.src = data[0].image
-      console.log(data[0].ingredientLines)
       data[0].ingredients.forEach (function(ingredients){
          var ingNode = document.getElementById("ingredients-list");
           var newIngredient = document.createElement("li");
@@ -28,7 +29,7 @@ $(document).ready(function(){
           ingNode.appendChild(newIngredient)
       });
       var directions = document.getElementById("site-display");
-      directions.src = data[0].url
+      //directions.src = data[0].url
 
   },
   error: function (data) {
@@ -36,3 +37,43 @@ $(document).ready(function(){
   }
   });
 });
+
+document.getElementById("miy").addEventListener("click",function(e){
+  document.getElementById("make-it-yours").style.display = "block"
+  document.getElementById("miy").style.display = "none"
+  document.getElementById("done").style.display = "block"
+});
+
+document.getElementById("done").addEventListener("click",function(e){
+  document.getElementById("make-it-yours").style.display = "none"
+  document.getElementById("miy-button").style.display = "block"
+  document.getElementById("miy").style.display = "block"
+  document.getElementById("done").style.display = "none"
+});
+
+document.getElementById("print").addEventListener("click",function(e){
+  e.preventDefault();
+  window.print();
+});
+
+var addIngredient = document.getElementById("add-ingredient");
+addIngredient.addEventListener("click",function(e){
+  e.preventDefault();
+  var subContainer = document.getElementById("sub-container");
+  var newSubSet = document.createElement("div");
+  var newSubLabel = document.createElement("label");
+  var newSubInput = document.createElement("input");
+  var newForLabel = document.createElement("label");
+  var newForInput = document.createElement("input");
+  newSubInput.type = "text"
+  newSubLabel.innerHTML = "Sub:"
+  newForInput.type = "text"
+  newForLabel.innerHTML = "For:"
+  newSubSet.className = "subIngredient"
+  subContainer.appendChild(newSubSet);
+  newSubSet.appendChild(newSubLabel);
+  newSubLabel.appendChild(newSubInput);
+  newSubSet.appendChild(newForLabel);
+  newForLabel.appendChild(newForInput);
+
+})

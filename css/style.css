@@ -1,16 +1,14 @@
 /* Nav */
 nav{
   background-size:100% 100%;
-  background-color:#033048;
-  color:#f9e42e;
+  background-color:#bebfb6;
+  color:white;
   height:75px;
   line-height:75px;
   border-bottom:5px solid white;
-
-  margin:0px 0px 50px 0px;
 }
 nav a{
-   color:#f9e42e;
+   color:white
 }
 
 nav ol{
@@ -21,10 +19,8 @@ nav ol{
   font-weight:600;
 }
 nav ol li{
-
     margin: 0px 10px 0px 10px;
     display:inline;
-
 }
 
 .nav-search{
@@ -74,7 +70,7 @@ nav ol li{
 .footer-full{
     float:left;
     width:100%;
-    background-color:#121212;
+    background-color:#364b4f;
     text-align:center;
 }
 
@@ -99,4 +95,17 @@ aside {
 }
 .recipe-details {
   float:left
+}
+
+#done {
+  display:none;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
 }
