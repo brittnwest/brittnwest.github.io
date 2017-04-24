@@ -1,3 +1,12 @@
+body {
+  color: #f0efef;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #606161;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
 /* Nav */
 nav{
   background-size:100% 100%;
@@ -5,33 +14,51 @@ nav{
   color:white;
   height:75px;
   line-height:75px;
-  border-bottom:5px solid white;
+
 }
 nav a{
-   color:white
+   color:white;
+   text-decoration:none;
 }
 
 nav ol{
   float:right;
   margin: 0px 10px 0px 0px;
   list-style-type: none;
-  font-size:24px;
+  font-size:16px;
   font-weight:600;
+
 }
 nav ol li{
     margin: 0px 10px 0px 10px;
     display:inline;
+
 }
 
 .nav-search{
 
 }
+/* Search */
+
 
 /* Home Page Banner */
 
 #banner-home{
 
+background-image:url("../images/cooking-college.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center center;
+height:400px;
+width:100%;
 }
+#logo {
+  height:50px;
+  width:50px;
+  display:inline;
+
+}
+
 
 /* Search Results */
 #search-results{
@@ -90,7 +117,7 @@ footer a{
 
 /* Recipe Details */
 aside {
-  float:left;
+  float:right;
   display:none;
 }
 .recipe-details {

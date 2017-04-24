@@ -11,10 +11,14 @@
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/style.css">
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 </head>
   <body>
     <header>
-      <div id="logo"><div>
+			<div id="logo-hdr">
+			<image id="logo" src="../images/fork_knife_logo.jpg"></image>
+			<h1>Dinner.Go.</h1>
+		</div>
       <nav>
         <ol>
           <li><a href="">Home</a></li>
@@ -23,9 +27,10 @@
       </nav>
     </header>
     <section id="banner-home">
-      <div>What's in your Fridge?</div>
-      <input type="search" class=searchterms onkeyup="inputKeyUp(event)" id="search"></input>
-			<div class=results></div>
+			<form>
+       <label>What's in your Fridge?</label>
+       <input type="search" class=searchterms onkeyup="inputKeyUp(event)" id="search"></input>
+		  </form>
     </section>
     <section id="featured-recipes">
     </section>
