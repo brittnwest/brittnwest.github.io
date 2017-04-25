@@ -19,10 +19,11 @@
 //get ingredients selected
 
     function inputKeyUp(event) {
+
         event.preventDefault();
         event.which = event.which || event.keyCode;
     if(event.which == 13) {
-           console.log("good start")
+            
             var searchterms = document.getElementById("search").value
             // call our search function
             getResultsFromAPI(searchterms);

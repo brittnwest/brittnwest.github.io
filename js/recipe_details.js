@@ -39,15 +39,17 @@ $(document).ready(function(){
 });
 
 document.getElementById("miy").addEventListener("click",function(e){
-  document.getElementById("make-it-yours").style.display = "block"
-  document.getElementById("miy").style.display = "none"
+  document.getElementById("make-it-yours").style.width = "250px";
+      document.getElementById("main").style.marginRight = "250px";
+  document.getElementById("miy").style.width = "none";
   document.getElementById("done").style.display = "block"
 });
 
 document.getElementById("done").addEventListener("click",function(e){
-  document.getElementById("make-it-yours").style.display = "none"
+  document.getElementById("make-it-yours").style.width = "0px";
+  document.getElementById("main").style.marginRight = "0px";
   document.getElementById("miy-button").style.display = "block"
-  document.getElementById("miy").style.display = "block"
+  document.getElementById("miy").style.dispaly = "block";
   document.getElementById("done").style.display = "none"
 });
 
@@ -55,6 +57,7 @@ document.getElementById("print").addEventListener("click",function(e){
   e.preventDefault();
   window.print();
 });
+
 
 var addIngredient = document.getElementById("add-ingredient");
 addIngredient.addEventListener("click",function(e){
