@@ -13,37 +13,28 @@ body {
 
 h1 {
   font-size:1.5rem;
+  font-family:'Dosis', 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
 header h1 {
-  float:left;
+  display:inline-block;
+
 }
 /* Nav */
 nav{
   background-size:100% 100%;
-  background-color:#bebfb6;
-  color:white;
-  height:75px;
-  line-height:75px;
-
-}
-nav a{
-   color:white;
-   text-decoration:none;
+  border-bottom-width: 1px;
+  border-bottom-style:solid;
+  height:50px;
+  line-height:50px;
+  border-bottom-color:black;
+  box-shadow: 3px 3px 1px 1px #ccc;
 }
 
-nav ol{
-  float:right;
-  margin: 0px 10px 0px 0px;
-  list-style-type: none;
-  font-size:16px;
-  font-weight:600;
 
-}
-nav ol li{
-    margin: 0px 10px 0px 10px;
-    display:inline;
-
+.col-sm-1 {
+  width:10px;
+  height:100%;
 }
 #logo-hdr{
   height:50px;
@@ -53,45 +44,43 @@ nav ol li{
   width:50px;
   display:inline;
   float:left;
-
 }
+
 .nav-search{
   width: 300px;
-
-  vertical-align: middle;
-  white-space: nowrap;
+  height:75px;
   position: relative;
+  float:right;
 }
 
-.nav-search .icon{
-  position:absolute;
-  margin-left: 27px;
-
-  top:50%;
-  color: #4f5b66;
+nav .icon{
+  position: absolute;
+ top: 0px;
+ left: 20px;
 }
 
-input[type=search]{
-   width: 300px;
-height: 30px;
-  margin-top:20px;
+nav input[type=search]{
+  width: 250px;
+  height: 30px;
+  margin-top:10px;
+  border: none;
+  font-size: .75rem;
   margin-left:10px;
-border: none;
-font-size: 10pt;
-float: left;
-color: #63717f;
-padding-left: 45px;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
+  color:black;
+  background-color:#f7f9f9;
+  padding-left: 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 1px 1px #ccc;
 }
+
 /* Search */
 
 
 /* Home Page Banner */
 
 #banner-home{
-
 background-image:url("../images/cooking-college.jpg");
 background-repeat:no-repeat;
 background-size:cover;
@@ -100,26 +89,52 @@ height:400px;
 width:100%;
 }
 
-
-
-/* Search Results */
-#search-results{
-
+#search-home {
+  margin: 0 auto;
+width:400px;
+}
+section input[type=search]{
+   width: 400px;
+   height: 40px;
+  border: none;
+  font-size: 1rem;
+  color: #63717f;
+  padding-left: 50px;
+  margin-top:100px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
-#filters-section{
+#search-icon-home{
+  position:absolute;
+  margin-left: 15px;
+  margin-top:105px;
+  color: #4f5b66;
+}
+/* Search Results */
 
+
+#results-content{
+  width:100%;
+  justify-content: flex-start;
+  display: flex;
+ flex-flow: row wrap;
 }
 /* Search Results Cards */
 .card {
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width:200px;
     float:left;
     padding:20px;
-}
+    margin:10px;
 
+}
+a {
+  color:#606161
+}
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -130,10 +145,22 @@ width:100%;
     padding: 2px 16px;
 }
 .card img {
-  height:100px;
-  width:100px;
+  max-width:200px;
 }
 
+a h3 {
+  font-size:1rem;
+  font-weight:bold;
+  padding-bottom:5px;
+}
+a h4 {
+  font-size:.75rem;
+  padding-bottom:5px;
+}
+a p {
+  font-size:.60rem;
+  padding-bottom:5px;
+}
 /* Footer */
 
 .footer-full{
@@ -158,16 +185,27 @@ footer a{
 }
 
 /* Recipe Details */
-
-.recipe-details {
-  float:left
+#recipe-details {
+  margin-right:40px;
 }
+#recipe-details h2 {
+  font-weight:bold;
+  font-size:1.5rem;
+  padding-bottom:5px;
+
+}
+
 #recipe-image {
   float:left;
-  margin: 0 10px 10px 10px;
+  margin: 0 10px 10px 0;
 }
 
-
+#site-display{
+  display:inline;
+  width:85%;
+  height:500px;
+  border:1px solid black;
+}
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table;
@@ -185,13 +223,30 @@ footer a{
     z-index: 1; /* Stay on top */
     top: 0;
     right: 0;
-    background-color: #dbac2a; /* Black*/
+    background-color: #f4f9f9;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius:5px;
     opacity:0.99;
     overflow-x: hidden; /* Disable horizontal scroll */
+
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 
+
   }
+  form {
+    padding:10px;
+  }
+  form h2{
+    font-size:1.5rem;
+    font-weight:bold;
+    margin-left:10px;
+  }
+.inner-wrap{
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
 
 .sideMenu .closebtn {
     position: absolute;
@@ -199,14 +254,31 @@ footer a{
     right: 25px;
     font-size: 1rem;
     margin-left: 50px;
-    color:white;
+    color:black;
 }
-.float{
+
+input[type=submit]{
+    background: #2A88AD;
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    font: normal 30px 'Bitter', serif;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid #257C9E;
+    font-size: 15px;
+    margin-left:10px;
+}
+.float {
 	position:fixed;
   font-size:1.25rem;
-	width:60px;
-	height:60px;
-	top:80px;
+	width:50px;
+	height:50px;
+	top:90px;
 	right:20px;
 	background-color:#0C9;
 	color:#FFF;
@@ -216,10 +288,55 @@ footer a{
 }
 
 .my-float{
-	margin-top:22px;
+	margin-top:15px;
 }
 
-
+#add-ingredient{
+  display:inline-block;
+}
+h3{
+  display:inline-block;
+}
+#mods{
+  display:block;
+}
+textarea {
+  background: rgba(255,255,255,.1);
+   border: none;
+   border-radius: 4px;
+   font-size: 16px;
+   margin: 0 5px 0 0;
+   outline: 0;
+   padding: 7px;
+   width: 90%;
+   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   background-color: #e8eeef;
+   color:#8a97a0;
+   -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+   margin-bottom: 30px;
+}
+input[type=text]{
+  display:inline-block;
+  background: rgba(255,255,255,.1);
+   border: none;
+   border-radius: 4px;
+   font-size: 16px;
+   margin: 0 5px 0 0;
+   outline: 0;
+   padding: 7px;
+   width: 100px;
+   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   background-color: #e8eeef;
+   color:#8a97a0;
+   -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+   margin-bottom: 30px;
+}
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-right .5s;
@@ -229,4 +346,16 @@ footer a{
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .side-menu {padding-top: 15px;}
+}
+
+@media print {
+  header nav, footer {
+display: none;
+}
+@page {
+margin: 0.5cm;
+}
+#print {
+  display:none;
+}
 }

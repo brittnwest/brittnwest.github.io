@@ -21,9 +21,10 @@
     function inputKeyUp(event) {
 
         event.preventDefault();
+
         event.which = event.which || event.keyCode;
     if(event.which == 13) {
-            
+
             var searchterms = document.getElementById("search").value
             // call our search function
             getResultsFromAPI(searchterms);

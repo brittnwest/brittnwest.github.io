@@ -22,8 +22,9 @@ success: function (data) {
     var newDiv = document.createElement("div");
     var newImg = document.createElement("img");
     var newContainer = document.createElement("div");
-    var newHeading = document.createElement("h4");
+    var newHeading = document.createElement("h3");
     var newDesc = document.createElement("p");
+    var newLevel = document.createElement("h4");
     var uri = encodeURIComponent(result.recipe.uri)
     newLink.href = "../html/recipe_details.html?r=" + uri
     newDiv.className = 'card'
@@ -31,13 +32,15 @@ success: function (data) {
     newContainer.className = 'container'
     newHeading.innerText = result.recipe.label
     newDesc.innerHTML = result.recipe.healthLabels
+    newLevel.innerHTML = result.recipe.dietLabels
     node.appendChild(newLink)
     newLink.appendChild(newDiv)
     newDiv.appendChild(newImg)
     newDiv.appendChild(newContainer)
     newContainer.appendChild(newHeading)
+    newContainer.appendChild(newLevel)
     newContainer.appendChild(newDesc)
-    
+
   });
 },
 error: function (data) {

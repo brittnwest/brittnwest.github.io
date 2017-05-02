@@ -29,7 +29,7 @@ $(document).ready(function(){
           ingNode.appendChild(newIngredient)
       });
       var directions = document.getElementById("site-display");
-      //directions.src = data[0].url
+      directions.src = data[0].url
 
   },
   error: function (data) {
@@ -39,9 +39,9 @@ $(document).ready(function(){
 });
 
 document.getElementById("miy").addEventListener("click",function(e){
-  document.getElementById("make-it-yours").style.width = "250px";
-      document.getElementById("main").style.marginRight = "250px";
-  document.getElementById("miy").style.width = "none";
+  document.getElementById("make-it-yours").style.width = "300px";
+      document.getElementById("main").style.marginRight = "300px";
+  document.getElementById("miy").style.display= "none";
   document.getElementById("done").style.display = "block"
 });
 
@@ -49,7 +49,7 @@ document.getElementById("done").addEventListener("click",function(e){
   document.getElementById("make-it-yours").style.width = "0px";
   document.getElementById("main").style.marginRight = "0px";
   document.getElementById("miy-button").style.display = "block"
-  document.getElementById("miy").style.dispaly = "block";
+  document.getElementById("miy").style.display = "block";
   document.getElementById("done").style.display = "none"
 });
 
@@ -64,18 +64,18 @@ addIngredient.addEventListener("click",function(e){
   e.preventDefault();
   var subContainer = document.getElementById("sub-container");
   var newSubSet = document.createElement("div");
-  var newSubLabel = document.createElement("label");
+  //var newSubLabel = document.createElement("label");
   var newSubInput = document.createElement("input");
   var newForLabel = document.createElement("label");
   var newForInput = document.createElement("input");
   newSubInput.type = "text"
-  newSubLabel.innerHTML = "Sub:"
+  //newSubLabel.innerHTML = "Sub:"
   newForInput.type = "text"
-  newForLabel.innerHTML = "For:"
+  newForLabel.innerHTML = "For "
   newSubSet.className = "subIngredient"
   subContainer.appendChild(newSubSet);
-  newSubSet.appendChild(newSubLabel);
-  newSubLabel.appendChild(newSubInput);
+  newSubSet.appendChild(newSubInput);
+  //newSubLabel.appendChild(newSubInput);
   newSubSet.appendChild(newForLabel);
   newForLabel.appendChild(newForInput);
 

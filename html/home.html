@@ -10,21 +10,26 @@
 <!-- external CSS link -->
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/style.css">
-	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+<script src="https://use.fontawesome.com/b92308708f.js"></script>
 </head>
   <body>
     <header>
 			<div id="logo-hdr">
-			<image id="logo" src="../images/fork_knife_logo.jpg"></image>
+			<img id="logo" src="../images/fork_knife_logo.jpg"></img>
 			<h1>Dinner.Go.</h1>
+			 
 		</div>
-    <div class="clearfix"></div>
-    </header>
-    <section id="banner-home">
 
-       <label>What's in your Fridge?
-       <input type="search" class=searchterms onkeyup="inputKeyUp(event)" id="search"></input></label>
+    </header>
+
+    <section  id="banner-home">
+
+			<div id="search-home">
+				<span class="icon" id="search-icon-home"><i class="fa fa-search fa-2x"></i></span>
+				<input type="search" id="search" onkeyup="inputKeyUp(event)" results=5 name=s placeholder="What's in your fridge?" />
+			</div>
 
     </section>
     <section id="featured-recipes">
