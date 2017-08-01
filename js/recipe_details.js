@@ -29,7 +29,7 @@ $(document).ready(function(){
           ingNode.appendChild(newIngredient)
       });
       var directions = document.getElementById("site-display");
-      directions.src = data[0].url
+      directions.src = "https://www.google.com/search?q=%" + data[0].url +  "&btnI=Im+Feeling+Lucky"
 
   },
   error: function (data) {
